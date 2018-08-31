@@ -8,6 +8,8 @@
 // factorial(5); // 120
 var factorial = function(n) {
   return n < 0 ? null : n > 1 ? n * factorial(n - 1) : 1;
+  // should return null for n < 0 ; // should return a number // factorial is (n-1)...(n-2)...(n-3)*n
+  // our base case is n is 0, which is why we stop at the n > 1 condition, otherwise return n * factorial (n-1)
 };
 
 // 2. Compute the sum of an array of integers.
