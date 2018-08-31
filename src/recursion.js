@@ -20,7 +20,7 @@ var sum = function(array) {
 // 3. Sum all numbers in an array containing nested arrays.
 // arraySum([1,[2,3],[[4]],5]); // 15
 var arraySum = function(array) {
-	array = flatten(array); 
+	array = flatten(array); // Uses recursive flatten algorithm (problem #30)
 	return array.reduce((acc, val) => acc + val, 0);
 };
 
