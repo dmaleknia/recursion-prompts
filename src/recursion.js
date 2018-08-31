@@ -23,7 +23,7 @@ var sum = function(array) {
 // 3. Sum all numbers in an array containing nested arrays.
 // arraySum([1,[2,3],[[4]],5]); // 15
 var arraySum = function(array) {
-	array = flatten(array); // Uses recursive flatten algorithm (problem #30)
+ array = flatten(array); // Uses recursive flatten algorithm (problem #30)
 	return array.reduce((acc, val) => acc + val, 0);
 };
 
@@ -31,11 +31,11 @@ var arraySum = function(array) {
 var isEven = function(n) {
 	// keep subtracting two from the number
 	  // base case: n = 0 or n = -1
-	if (n > 0) {
-	  return n === 0 ? true : n === 1 ? false : isEven(n - 2);
-	} else {
-	   return n === 0 ? true : n === 1 ? false : isEven(n + 2);
-	}
+  if (n > 0) {
+    return n === 0 ? true : n === 1 ? false : isEven(n - 2);
+  } else {
+    return n === 0 ? true : n === 1 ? false : isEven(n + 2);
+  }
 };
 
 // 5. Sum all integers below a given integer.
@@ -51,6 +51,7 @@ var range = function(x, y) {
 
 };
 
+// 7. Compute the exponent of a number.
 // The exponent of a number says how many times the base number is used as a factor.
 // 8^2 = 8 x 8 = 64. Here, 8 is the base and 2 is the exponent.
 // exponent(4,3); // 64
@@ -59,6 +60,10 @@ var exponent = function(base, exp) {
   return exp === 0 ? 1 : base * exponent(base, exp - 1);
 };
 
+// 8. Determine if a number is a power of two.
+// powerOfTwo(1); // true
+// powerOfTwo(16); // true
+// powerOfTwo(10); // false
 var powerOfTwo = function(n) {
 };
 
@@ -198,7 +203,7 @@ var nestedEvenSum = function(obj) {
 // 30. Flatten an array containing nested arrays.
 // flatten([1,[2],[3,[[4]]],5]); // [1,2,3,4,5]
 var flatten = function(array) {
-	return array.reduce((acc, val) => Array.isArray(val) ? acc.concat(flatten(val)) : acc.concat(val), []);
+  return array.reduce((acc, val) => Array.isArray(val) ? acc.concat(flatten(val)) : acc.concat(val), []);
 };
 
 // 31. Given a string, return an object containing tallies of each letter.
