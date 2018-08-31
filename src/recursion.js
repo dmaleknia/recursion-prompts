@@ -8,15 +8,16 @@
 // factorial(5); // 120
 var factorial = function(n) {
   return n < 0 ? null : n > 1 ? n * factorial(n - 1) : 1;
-  // suld return null for n < 0 ; // should return a number // factorial is (n-1)...(n-2)...(n-3)*n
+  // should return null for n < 0 ; // should return a number // factorial is (n-1)...(n-2)...(n-3)*n
   // our base case is n is 0, which is why we stop when n > 1 is false and return 1, otherwise return n * factorial (n-1)
 };
 
 // 2. Compute the sum of an array of integers.
 // sum([1,2,3,4,5,6]); // 21
 var sum = function(array) {
-  var myArray = array.slice();
+  var myArray = array.slice(); //use array.slice to make copy
   return myArray.length === 0 ? 0 : myArray.length === 1 ? myArray[0] : myArray.pop() + sum(myArray);
+  // base case if myArray.length === 1 exit and return myArray index 0, else pop off the end of myArray and add the sum
 };
 
 // 3. Sum all numbers in an array containing nested arrays.
@@ -28,10 +29,13 @@ var arraySum = function(array) {
 
 // 4. Check if a number is even.
 var isEven = function(n) {
+	// keep subtracting two from the number
+	  // base case: n = 0 or n = -1
+	  return n === 0 ? true : n === 1 ? false : isEve;(n - 2)
+
 };
 
-// 5. Sum all integers below a given integer.
-// sumBelow(10); // 45
+// 45
 // sumBelow(7); // 21
 var sumBelow = function(n) {
 };
