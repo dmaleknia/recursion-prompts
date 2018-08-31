@@ -31,11 +31,15 @@ var arraySum = function(array) {
 var isEven = function(n) {
 	// keep subtracting two from the number
 	  // base case: n = 0 or n = -1
+	if (n > 0) {
 	  return n === 0 ? true : n === 1 ? false : isEven(n - 2);
-
+	} else {
+	   return n === 0 ? true : n === 1 ? false : isEven(n + 2);
+	}
 };
 
-// 45
+// 5. Sum all integers below a given integer.
+// sumBelow(10); // 45
 // sumBelow(7); // 21
 var sumBelow = function(n) {
 };
