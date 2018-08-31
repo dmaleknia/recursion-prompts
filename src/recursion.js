@@ -7,7 +7,7 @@
 // Example: 5! = 5 x 4 x 3 x 2 x 1 = 120
 // factorial(5); // 120
 var factorial = function(n) {
-  return n < 0 ? ull : n > 1 ? n *n * factorial(n - 1) : 1;
+  return n < 0 ? null : n > 1 ? n * factorial(n   1) : 1;
   // suld return null for n < 0 ; // should return a number // factorial is (n-1)...(n-2)...(n-3)*n
   // our base case is n is 0, which is why we stop when n > 1 is false and return 1, otherwise return n * factorial (n-1)
 };
