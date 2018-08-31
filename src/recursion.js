@@ -23,14 +23,14 @@ var sum = function(array) {
 // 3. Sum all numbers in an array containing nested arrays.
 // arraySum([1,[2,3],[[4]],5]); // 15
 var arraySum = function(array) {
- array = flatten(array); // Uses recursive flatten algorithm (problem #30)
-	return array.reduce((acc, val) => acc + val, 0);
+  array = flatten(array); // Uses recursive flatten algorithm (problem #30)
+  return array.reduce((acc, val) => acc + val, 0);
 };
 
 // 4. Check if a number is even.
 var isEven = function(n) {
-	// keep subtracting two from the number
-	  // base case: n = 0 or n = -1
+  // keep subtracting two from the number
+    // base case: n = 0 or n = -1
   if (n > 0) {
     return n === 0 ? true : n === 1 ? false : isEven(n - 2);
   } else {
