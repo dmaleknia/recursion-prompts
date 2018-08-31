@@ -31,7 +31,7 @@ var arraySum = function(array) {
 var isEven = function(n) {
 	// keep subtracting two from the number
 	  // base case: n = 0 or n = -1
-	  return n === 0 ? true : n === 1 ? false : isEve;(n - 2)
+	  return n === 0 ? true : n === 1 ? false : isEven(n - 2);
 
 };
 
