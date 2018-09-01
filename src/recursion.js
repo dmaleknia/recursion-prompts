@@ -56,7 +56,7 @@ var exponent = function(base, exp) {
 // powerOfTwo(16); // true
 // powerOfTwo(10); // false
 var powerOfTwo = function(n) {
-  return n === 1 ? true : n < 1 ? false : powerOfTwo(Math.sqrt(n));
+  return n === 1 ? true : n % 2 != 0 || n === 0 ? false : powerOfTwo(n / 2);
 };
 
 // 9. Write a function that reverses a string.
