@@ -29,8 +29,6 @@ var arraySum = function(array) {
 
 // 4. Check if a number is even.
 var isEven = function(n) {
-  // keep subtracting two from the number
-    // base case: n = 0 or n = -1
     return n > 0 ? n === 0 ? true : n === 1 ? false : isEven(n - 2) : n === 0 ? true : n === 1 ? false : isEven(n + 2);
 };
 
@@ -38,7 +36,7 @@ var isEven = function(n) {
 // sumBelow(10); // 45
 // sumBelow(7); // 21
 var sumBelow = function(n) {
-  return n === 0 ? 0 : (n - 1) + sumBelow(n - 1);
+  return n > 0 ? n === 0 ? 0 : (n - 1) + sumBelow(n - 1) : n === 0 ? 0 : (n + 1) + sumBelow(n + 1);
 };
 
 // 6. Get the integers within a range (x, y).
