@@ -26,7 +26,7 @@ var arraySum = function(array) {
 
 // 4. Check if a number is even.
 var isEven = function(n) {
-    return n > 0 ? n === 0 ? true : n === 1 ? false : isEven(n - 2) : n === 0 ? true : n === 1 ? false : isEven(n + 2);
+  return n > 0 ? n === 0 ? true : n === 1 ? false : isEven(n - 2) : n === 0 ? true : n === 1 ? false : isEven(n + 2);
 };
 
 // 5. Sum all integers below a given integer.
@@ -56,7 +56,7 @@ var exponent = function(base, exp) {
 // powerOfTwo(16); // true
 // powerOfTwo(10); // false
 var powerOfTwo = function(n) {
-
+  return n === 1 ? true : n < 1 ? false : powerOfTwo(Math.sqrt(n));
 };
 
 // 9. Write a function that reverses a string.
