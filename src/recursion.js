@@ -20,8 +20,9 @@ var sum = function(array) {
 // 3. Sum all numbers in an array containing nested arrays.
 // arraySum([1,[2,3],[[4]],5]); // 15
 var arraySum = function(array) {
-  array = flatten(array); // Uses recursive flatten algorithm (problem #30) but fails the spec for "not using recursive" - HA!
-  return array.reduce((acc, val) => acc + val, 0);
+   return array.reduce((acc, val) => {
+    return acc + (Array.isArray(val) ? arraySum(val) : val)
+  }, 0);
 };
 
 // 4. Check if a number is even.
