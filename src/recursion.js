@@ -8,8 +8,6 @@
 // factorial(5); // 120
 var factorial = function(n) {
   return n < 0 ? null : n > 1 ? n * factorial(n - 1) : 1;
-  // should return null for n < 0 ; // should return a number // factorial is (n-1)...(n-2)...(n-3)*n
-  // our base case is n is 0, which is why we stop when n > 1 is false and return 1, otherwise return n * factorial (n-1)
 };
 
 // 2. Compute the sum of an array of integers.
@@ -17,13 +15,12 @@ var factorial = function(n) {
 var sum = function(array) {
   var myArray = array.slice(); //use array.slice to make copy
   return myArray.length === 0 ? 0 : myArray.length === 1 ? myArray[0] : myArray.pop() + sum(myArray);
-  // base case if myArray.length === 1 exit and return myArray index 0, else pop off the end of myArray and add the sum
 };
 
 // 3. Sum all numbers in an array containing nested arrays.
 // arraySum([1,[2,3],[[4]],5]); // 15
 var arraySum = function(array) {
-  array = flatten(array); // Uses recursive flatten algorithm (problem #30)
+  array = flatten(array); // Uses recursive flatten algorithm (problem #30) but fails the spec for "not using recursive" - HA!
   return array.reduce((acc, val) => acc + val, 0);
 };
 
@@ -59,6 +56,7 @@ var exponent = function(base, exp) {
 // powerOfTwo(16); // true
 // powerOfTwo(10); // false
 var powerOfTwo = function(n) {
+
 };
 
 // 9. Write a function that reverses a string.
