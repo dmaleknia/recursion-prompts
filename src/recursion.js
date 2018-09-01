@@ -31,11 +31,7 @@ var arraySum = function(array) {
 var isEven = function(n) {
   // keep subtracting two from the number
     // base case: n = 0 or n = -1
-  if (n > 0) {
-    return n === 0 ? true : n === 1 ? false : isEven(n - 2);
-  } else {
-    return n === 0 ? true : n === 1 ? false : isEven(n + 2);
-  }
+    return n > 0 ? n === 0 ? true : n === 1 ? false : isEven(n - 2) : n === 0 ? true : n === 1 ? false : isEven(n + 2);
 };
 
 // 5. Sum all integers below a given integer.
