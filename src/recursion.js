@@ -221,13 +221,11 @@ var replaceKeysInObj = function(obj, oldKey, newKey) {
 // Example: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34.....
 // fibonacci(5); // [0,1,1,2,3,5]
 // Note: The 0 is not counted.
-
-// return n === 0 ? 0 : n === 1 ? 1 : fibonacci(n - 1) + fibonacci(n - 2);
 var fibonacci = function(n) {
   var result = [];
   if (n <= 0) {
     return null;
-  } 
+  }
   if (n === 1) {
     return [0, 1];
   }
