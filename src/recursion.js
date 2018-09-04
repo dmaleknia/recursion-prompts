@@ -177,7 +177,7 @@ var countOccurrence = function(array, value) {
   return (!array.length) ? 0 : count + countOccurrence(array.slice(1), value);
 };
 
-21. Write a recursive version of map.
+// 21. Write a recursive version of map.
 // rMap([1,2,3], timesTwo); // [2,4,6]
 // Call map() using the array [ ‘a’, ‘b’, ‘c’ ]
 var rMap= function(array, callback) {
@@ -230,8 +230,9 @@ var replaceKeysInObj = function(obj, oldKey, newKey) {
     var item = obj[key];
     if (key === oldKey) {
       obj[newKey] = item;
-      delete(obj[oj[oldKey]);
-      if (typeof item === 'object') {
+      delete(obj[oldKey]);
+    }
+    if (typeof item === 'object') {
       obj[key] = replaceKeysInObj(item, oldKey, newKey);
     }
   }
