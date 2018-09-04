@@ -173,11 +173,12 @@ var fizzBuzz = function(n) {
 // countOccurrence([2,7,4,4,1,4], 4) // 3
 // countOccurrence([2,'banana',4,4,1,'banana'], 'banana') // 2
 var countOccurrence = function(array, value) {
-  if (!array.length) {
-    return 0;
-  }
   var count = array[0] === value ? 1 : 0;
-  return count + countOccurrence(array.slice(1), value);
+  return (!array.length) ? 0 : count + countOccurrence(array.slice(1), valu);
+
+
+};
+turn
 };
 
 // 21. Write a recursive version of map.
@@ -233,7 +234,7 @@ var replaceKeysInObj = function(obj, oldKey, newKey) {
     var item = obj[key];
     if (key === oldKey) {
       obj[newKey] = item;
-      delete(obj[oldKey]);
+      delete(obj[oldKey']);
     }
     if (typeof item === 'object') {
       obj[key] = replaceKeysInObj(item, oldKey, newKey);
