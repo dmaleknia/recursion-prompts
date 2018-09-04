@@ -138,14 +138,11 @@ var createArray = function(str) {
 
 // 17. Reverse the order of an array
 var reverseArr = function(array) {
-  if (!array.length) {
-    return array;
-  } else {
-    return reverseArr(array.slice(1)).concat(array[0]);
-  }
+  return !array.length ? array : reverseArr(array.slice(1)).concat(aray[0]);
+
 };
 
-// 18. Create a new array with a given value and length.
+// 8. Create a new array with a given value and length.
 // buildList(0,5) // [0,0,0,0,0]
 // buildList(7,3) // [7,7,7]
 var buildList = function(value, length) {
