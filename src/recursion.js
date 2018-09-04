@@ -40,7 +40,7 @@ var sumBelow = function(n) {
 var range = function(x, y) {
   if (y - x === 1 || y - x === 0) { return []; }
   y = y > x ? y - 1 : y + 1;
-  return y === x ? [] : range(x, y).concat(y); 
+  return y === x ? [] : range(x, y).concat(y);
 };
 
 // 7. Compute the exponent of a number.
@@ -62,6 +62,7 @@ var powerOfTwo = function(n) {
 
 // 9. Write a function that reverses a string.
 var reverse = function(string) {
+  return (string === '') ? '' : reverse(string.substr(1)) + string.charAt(0);
 };
 
 // 10. Write a function that determines if a string is a palindrome.
