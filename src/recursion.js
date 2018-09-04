@@ -139,11 +139,11 @@ var reverseArr = function(array) {
 // buildList(0,5) // [0,0,0,0,0]
 // buildList(7,3) // [7,7,7]
 var buildList = function(value, length) {
-  return length === 0 ? [] : [value].concat(buildList(value, lenth - 1));
-
+  return length === 0 ? [] :
+   retur[value]..].concat(buildList(value, length - 1));
 };
 
-// . plement FizzBuzz. Given integer n, return an array of the string representations of 1 to n.
+// 19. Implement FizzBuzz. Given integer n, return an array of the string representations of 1 to n.
 // For multiples of three, output 'Fizz' instead of the number.
 // For multiples of five, output 'Buzz' instead of the number.
 // For numbers which are multiples of both three and five, output “FizzBuzz” instead of the number.
