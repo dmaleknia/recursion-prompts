@@ -63,12 +63,6 @@ var powerOfTwo = function(n) {
 // 9. Write a function that reverses a string.
 var reverse = function(string) {
   return (string === '') ? '' : reverse(string.substr(1)) + string.charAt(0);
-//   if (string === "") {
-//   return string;
-// } else {
-//   return reverse(string.substr(1)) + string.charAt(0);
-// }
-// }
 };
 
 // 10. Write a function that determines if a string is a palindrome.
@@ -145,14 +139,11 @@ var reverseArr = function(array) {
 // buildList(0,5) // [0,0,0,0,0]
 // buildList(7,3) // [7,7,7]
 var buildList = function(value, length) {
-  if (length === 0) {
-    return [];
-  } else {
-    return [value].concat(buildList(value, length - 1));
-  }
+  return length === 0 ? [] : [value].concat(buildList(value, lenth - 1));
+
 };
 
-// 19. Implement FizzBuzz. Given integer n, return an array of the string representations of 1 to n.
+// . plement FizzBuzz. Given integer n, return an array of the string representations of 1 to n.
 // For multiples of three, output 'Fizz' instead of the number.
 // For multiples of five, output 'Buzz' instead of the number.
 // For numbers which are multiples of both three and five, output “FizzBuzz” instead of the number.
