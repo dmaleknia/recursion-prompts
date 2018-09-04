@@ -88,7 +88,7 @@ var palindrome = function(string) {
 // modulo(17,5) // 2
 // modulo(22,6) // 4
 var modulo = function(x, y) {
-  return y === 0 ? NaN : x === y ? 0 : y < x ? modulo(x - y, y) : x;
+  return y === 0 ? NaN : x === y ? 0 : x < 0 ? -modulo(-x, y) : y < 0 ? modulo(x, -y) : y < x ? modulo(x-y, y) : x;
 };
 
 // te a function that multiplies two numbers without using the * operator or
