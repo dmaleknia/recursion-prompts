@@ -174,14 +174,10 @@ var fizzBuzz = function(n) {
 // countOccurrence([2,'banana',4,4,1,'banana'], 'banana') // 2
 var countOccurrence = function(array, value) {
   var count = array[0] === value ? 1 : 0;
-  return (!array.length) ? 0 : count + countOccurrence(array.slice(1), valu);
-
-
-};
-turn
+  return (!array.length) ? 0 : count + countOccurrence(array.slice(1), value);
 };
 
-// 21. Write a recursive version of map.
+21. Write a recursive version of map.
 // rMap([1,2,3], timesTwo); // [2,4,6]
 // Call map() using the array [ ‘a’, ‘b’, ‘c’ ]
 var rMap= function(array, callback) {
@@ -234,9 +230,8 @@ var replaceKeysInObj = function(obj, oldKey, newKey) {
     var item = obj[key];
     if (key === oldKey) {
       obj[newKey] = item;
-      delete(obj[oldKey']);
-    }
-    if (typeof item === 'object') {
+      delete(obj[oj[oldKey]);
+      if (typeof item === 'object') {
       obj[key] = replaceKeysInObj(item, oldKey, newKey);
     }
   }
