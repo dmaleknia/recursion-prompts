@@ -158,6 +158,25 @@ var buildList = function(value, length) {
 // For numbers which are multiples of both three and five, output “FizzBuzz” instead of the number.
 // fizzBuzz(5) // ['1','2','Fizz','4','Buzz']
 var fizzBuzz = function(n) {
+  var result = [];
+
+  if (n === 0) {
+    return result;
+  }
+
+  var value = n.toString();
+
+  if (n % 3 === 0) {
+    value = 'Fizz';
+  }
+  if (n % 5 === 0) {
+    value = 'Buzz';
+  }
+  if (n % 15 === 0) {
+    value = 'FizzBuzz';
+  }
+  result.push(value);
+  return fizzBuzz(n - 1).concat(result);
 };
 
 // 20. Count the occurence of a value in a list.
