@@ -94,7 +94,7 @@ var modulo = function(x, y) {
 // 12. Write a function that multiplies two numbers without using the * operator or
 // Math methods.
 var multiply = function(x, y) {
-  return x < y ? multiply(y, x) : y !== 0 ? x + multiply(x, y - 1) : 0;
+  return x < y ? multiply(y, x) : y < 0 ? -multiply(x, -y) : y !== 0 ? x + multiply(x, y - 1) : 0;
 };
 
 // 13. Write a function that divides two numbers without using the / operator or
