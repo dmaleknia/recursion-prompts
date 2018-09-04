@@ -199,8 +199,7 @@ var countOccurrence = function(array, value) {
 // Repeat steps 1 through 3 for [ ‘c’ ]
 // Eventually, we call map() with an empty array, which ends the recursion.
 
-
-var rMap = function(array, callback) {
+var rMap= function(array, callback) {
   return !array.length ? [] : [callback(array[0])].concat(rMap(array.slice(1), callback));
 };
 
@@ -251,6 +250,7 @@ var nthFibo = function(n) {
 // var words = ['i', 'am', 'learning', 'recursion'];
 // capitalizedWords(words); // ['I', 'AM', 'LEARNING', 'RECURSION']
 var capitalizeWords = function(array) {
+  return !array.length ? [] : [(array[0]).toUpperCase()].concat(capitalizeWords(array.slice(1)));
 };
 
 // 28. Given an array of strings, capitalize the first letter of each index.
