@@ -91,7 +91,7 @@ var modulo = function(x, y) {
   return y === 0 ? NaN : x === y ? 0 : x < 0 ? -modulo(-x, y) : y < 0 ? modulo(x, -y) : y < x ? modulo(x-y, y) : x;
 };
 
-// te a function that multiplies two numbers without using the * operator or
+// 12. Write a funlies two numbers without using the * operator or
 // Math methods.
 var multiply = function(x, y) {
 };
