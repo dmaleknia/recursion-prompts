@@ -1,5 +1,8 @@
 /* jshint esversion: 6 */
 
+/* Completed by Dominic M. - in this exercise I tried to emphasize brief, logial solutions, 
+emphasizing thoughtful use of ternary statements and refactoring, whenever possible */
+
 // Solve the following prompts using recursion.
 
 // 1. Calculate the factorial of a number. The factorial of a non-negative integer n,
@@ -192,7 +195,7 @@ var countValuesInObj = function(obj, value) {
 // 24. Find all keys in an object (and nested objects) by a provided name and rename
 // them to a provided new name while preserving the value stored at that key.
 var replaceKeysInObj = function(obj, oldKey, newKey) {
-  
+
 };
 
 // 25. Get the first n Fibonacci numbers. In the Fibonacci sequence, each subsequent
