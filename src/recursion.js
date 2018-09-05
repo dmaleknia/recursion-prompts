@@ -233,9 +233,7 @@ var capitalizeWords = function(array) {
 // 28. Given an array of strings, capitalize the first letter of each index.
 // capitalizeFirst(['car','poop','banana']); // ['Car','Poop','Banana']
 var capitalizeFirst = function(array) {
-  String.prototype.capitalize = function() {
-    return this.charAt(0).toUpperCase() + this.slice(1);
-  }
+  String.prototype.capitalize = function() { return this.charAt(0).toUpperCase() + this.slice(1); }
   return !array.length ? [] : [(array[0]).capitalize()].concat(capitalizeFirst(array.slice(1)));
 };
 
