@@ -175,7 +175,7 @@ var countKeysInObj = function(obj, key) {
   return count;
 };
 
-// 3. Write a function that counts the number of times a value occurs in an object.
+// 23. Write a function that counts the number of times a value occurs in an object.
 // var obj = {'e':{'x':'y'},'t':{'r':{'e':'r'},'p':{'y':'r'}},'y':'e'};
 // countValuesInObj(obj, 'r') // 2
 // countValuesInObj(obj, 'e') // 1
@@ -183,12 +183,8 @@ var countValuesInObj = function(obj, value) {
   var count = 0;
   for (var key in obj) {
     var item = obj[key];
-    if (item === value) {
-      count ++
-    }
-    if (typeof item === 'object') {
-      count += countValuesInObj(item, value);
-    }
+    if (item === value) count ++;
+    if (typeof item === 'object') count += countValuesInObj(item, value);
   }
   return count;
 };
