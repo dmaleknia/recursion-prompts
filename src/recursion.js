@@ -290,6 +290,17 @@ var capitalizeFirst = function(array) {
 // };
 // nestedEvenSum(obj1); // 10
 var nestedEvenSum = function(obj) {
+  // var sum = 0;
+  // for (var key in obj) {
+  //   var item = obj[key];
+  //   if typeof(obj[key] === 'number') && obj[key] % 2 === 0 {
+  //     sum ++;
+  //   }
+  //   if typeof(obj[key] === 'object') {
+  //     sum += nestedEvenSum(obj[key]);
+  //   }
+  // }
+  // return sum;
 };
 
 // 30. Flatten an array containing nested arrays.
@@ -315,6 +326,7 @@ var compress = function(list) {
 // itself.
 // augmentElements([[],[3],[7]], 5); // [[5],[3,5],[7,5]]
 var augmentElements = function(array, aug) {
+  return array.length === 1 ? [array[0].concat([aug])] : [array[0].concat(aug)].concat(augmentElements(array.slice(1), aug));
 };
 
 // 34. Reduce a series of zeroes to a single 0.
