@@ -143,22 +143,8 @@ var buildList = function(value, length) {
 // fizzBuzz(5) // ['1','2','Fizz','4','Buzz']
 var fizzBuzz = function(n) {
   var result = [];
-
-  if (n === 0) {
-    return result;
-  }
-
-  var value = n.toString();
-
-  if (n % 3 === 0) {
-    value = 'Fizz';
-  }
-  if (n % 5 === 0) {
-    value = 'Buzz';
-  }
-  if (n % 15 === 0) {
-    value = 'FizzBuzz';
-  }
+  if (n === 0) return result;
+  value = n % 15 === 0 ? 'FizzBuzz' : (n % 5 === 0) ? 'Buzz' : (n % 3 === 0) ? 'Fizz' : n.toString();
   result.push(value);
   return fizzBuzz(n - 1).concat(result);
 };
