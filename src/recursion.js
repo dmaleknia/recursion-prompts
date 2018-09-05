@@ -67,13 +67,7 @@ var reverse = function(string) {
 
 // 10. Write a function that determines if a string is a palindrome.
 var palindrome = function(string) {
-  if (string.length < 2) {
-    return true;
-  } else if (string.charAt(0).toLowerCase() === string.charAt(string.length - 1).toLowerCase()) {
-    return palindrome(string.slice(1, string.length - 1));
-  } else {
-    return false;
-  }
+  return string.length < 2 ? true : (string.charAt(0).toLowerCase() === string.charAt(string.length - 1).toLowerCase()) ? palindrome(string.slice(1, string.length - 1)) : false;
 };
 
 // 11. Write a function that returns the remainder of x divided by y without using the
@@ -227,14 +221,15 @@ var replaceKeysInObj = function(obj, oldKey, newKey) {
   for (var key in obj) {
     var value = obj[key];
     if (key === oldKey) {
-      obj[newKey] = value;
-      delete obj[oldKey];
-    }
+            obj[newKey] = value;
+            delete obj[oldKey];
+        }
     if (typeof value === 'object') {
       obj[key] = replaceKeysInObj(value, oldKey, newKey);
     }
   }
-  return obj;
+
+    return obj;
 };
 
 // 25. Get the first n Fibonacci numbers. In the Fibonacci sequence, each subsequent
