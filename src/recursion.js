@@ -224,7 +224,6 @@ var countValuesInObj = function(obj, value) {
 // 24. Find all keys in an object (and nested objects) by a provided name and rename
 // them to a provided new name while preserving the value stored at that key.
 var replaceKeysInObj = function(obj, oldKey, newKey) {
-      //loop through object:
   for (var key in obj) {
     var value = obj[key];
     if (key === oldKey) {
@@ -342,26 +341,26 @@ var minimizeZeroes = function(array) {
 // alternateSign([2,7,8,3,1,4]) // [2,-7,8,-3,1,-4]
 // alternateSign([-2,-7,8,3,-1,4]) // [2,-7,8,-3,1,-4]
 var alternateSign = function(array) {
-   if(array.length===2) return (array[0]) ? Math.abs(array[1]) : Math.abs(array[1])*-1;
-    if(typeof array[0] !== 'boolean') array.unshift(true);
-    if(array[0]){
-        array.splice(2,0,false);
-        return [Math.abs(array[1])].concat(alternateSign(array.slice(2)));
-    }else{
-        array.splice(2,0,true);
-        return [Math.abs(array[1])*-1].concat(alternateSign(array.slice(2)));
-    }
+  if (array.length===2) return (array[0]) ? Math.abs(array[1]) : Math.abs(array[1])*-1;
+  if (typeof array[0] !== 'boolean') array.unshift(true);
+  if (array[0]) {
+    array.splice(2,0,false);
+    return [Math.abs(array[1])].concat(alternateSign(array.slice(2)));
+  } else {
+    array.splice(2,0,true);
+    return [Math.abs(array[1])*-1].concat(alternateSign(array.slice(2)));
+  }
 };
 
 // 36. Given a string, return a string with digits converted to their word equivalent.
 // Assume all numbers are single digits (less than 10).
 // numToText("I have 5 dogs and 6 ponies"); // "I have five dogs and six ponies"
 var numToText = function(str) {
-    var words = ['zero', 'one','two','three','four','five','six','seven','eight','nine'];
-    var strs = str.split(' ');
-    if (strs.length === 1) return (!isNaN(Number(strs[0]))) ? words[Number(strs[0])] : strs[0];
-    var substr = (strs.slice(1).join(' '));
-    return (!isNaN(Number(strs[0]))) ? (words[Number(strs[0])] + ' ' + numToText(substr)) : (strs[0] + ' ' + numToText(substr));
+  var words = ['zero', 'one','two','three','four','five','six','seven','eight','nine'];
+  var strs = str.split(' ');
+  if (strs.length === 1) return (!isNaN(Number(strs[0]))) ? words[Number(strs[0])] : strs[0];
+  var substr = (strs.slice(1).join(' '));
+  return (!isNaN(Number(strs[0]))) ? (words[Number(strs[0])] + ' ' + numToText(substr)) : (strs[0] + ' ' + numToText(substr));
 };
 
 
