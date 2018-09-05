@@ -195,15 +195,14 @@ var replaceKeysInObj = function(obj, oldKey, newKey) {
   for (var key in obj) {
     var value = obj[key];
     if (key === oldKey) {
-            obj[newKey] = value;
-            delete obj[oldKey];
-        }
+      obj[newKey] = value;
+      delete obj[oldKey];
+    }
     if (typeof value === 'object') {
       obj[key] = replaceKeysInObj(value, oldKey, newKey);
     }
   }
-
-    return obj;
+  return obj;
 };
 
 // 25. Get the first n Fibonacci numbers. In the Fibonacci sequence, each subsequent
