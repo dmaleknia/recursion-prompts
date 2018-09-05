@@ -226,14 +226,15 @@ var countValuesInObj = function(obj, value) {
 // 24. Find all keys in an object (and nested objects) by a provided name and rename
 // them to a provided new name while preserving the value stored at that key.
 var replaceKeysInObj = function(obj, oldKey, newKey) {
+      //loop through object:
   for (var key in obj) {
-    var item = obj[key];
+    var value = obj[key];
     if (key === oldKey) {
-      obj[newKey] = item;
-      delete(obj[oldKey]);
+      obj[newKey] = value;
+      delete obj[oldKey];
     }
-    if (typeof item === 'object') {
-      obj[key] = replaceKeysInObj(item, oldKey, newKey);
+    if (typeof value === 'object') {
+      obj[key] = replaceKeysInObj(value, oldKey, newKey);
     }
   }
   return obj;
@@ -333,6 +334,9 @@ var augmentElements = function(array, aug) {
 // minimizeZeroes([2,0,0,0,1,4]) // [2,0,1,4]
 // minimizeZeroes([2,0,0,0,1,0,0,4]) // [2,0,1,0,4]
 var minimizeZeroes = function(array) {
+  if (array.length === 1) return array.shift();
+  if (array[0] === 0 && array[1] === 0) return minimizeZeroes(array.slice(1));
+  return [array.shift()].concat(minimizeZeroes(array));  
 };
 
 // 35. Alternate the numbers in an array between positive and negative regardless of
