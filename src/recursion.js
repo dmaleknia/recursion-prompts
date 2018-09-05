@@ -192,17 +192,7 @@ var countValuesInObj = function(obj, value) {
 // 24. Find all keys in an object (and nested objects) by a provided name and rename
 // them to a provided new name while preserving the value stored at that key.
 var replaceKeysInObj = function(obj, oldKey, newKey) {
-  for (var key in obj) {
-    var value = obj[key];
-    if (key === oldKey) {
-      obj[newKey] = value;
-      delete obj[oldKey];
-    }
-    if (typeof value === 'object') {
-      obj[key] = replaceKeysInObj(value, oldKey, newKey);
-    }
-  }
-  return obj;
+  
 };
 
 // 25. Get the first n Fibonacci numbers. In the Fibonacci sequence, each subsequent
@@ -256,17 +246,6 @@ var capitalizeFirst = function(array) {
 // };
 // nestedEvenSum(obj1); // 10
 var nestedEvenSum = function(obj) {
-  // var sum = 0;
-  // for (var key in obj) {
-  //   var item = obj[key];
-  //   if typeof(obj[key] === 'number') && obj[key] % 2 === 0 {
-  //     sum ++;
-  //   }
-  //   if typeof(obj[key] === 'object') {
-  //     sum += nestedEvenSum(obj[key]);
-  //   }
-  // }
-  // return sum;
 };
 
 // 30. Flatten an array containing nested arrays.
@@ -332,29 +311,29 @@ var numToText = function(str) {
 };
 
 
-// *** EXTRA CREDIT ***
+// // *** EXTRA CREDIT ***
 
-// 37. Return the number of times a tag occurs in the DOM.
-var tagCount = function(tag, node) {
-};
+// // 37. Return the number of times a tag occurs in the DOM.
+// var tagCount = function(tag, node) {
+// };
 
-// 38. Write a function for binary search.
-// var array = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15];
-// binarySearch(array, 5) // 5
-// https://www.khanacademy.org/computing/computer-science/algorithms/binary-search/a/binary-search
-var binarySearch = function(array, target, min, max) {
-};
+// // 38. Write a function for binary search.
+// // var array = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15];
+// // binarySearch(array, 5) // 5
+// // https://www.khanacademy.org/computing/computer-science/algorithms/binary-search/a/binary-search
+// var binarySearch = function(array, target, min, max) {
+// };
 
-// 39. Write a merge sort function.
-// mergeSort([34,7,23,32,5,62]) // [5,7,23,32,34,62]
-// https://www.khanacademy.org/computing/computer-science/algorithms/merge-sort/a/divide-and-conquer-algorithms
-var mergeSort = function(array) {
-};
+// // 39. Write a merge sort function.
+// // mergeSort([34,7,23,32,5,62]) // [5,7,23,32,34,62]
+// // https://www.khanacademy.org/computing/computer-science/algorithms/merge-sort/a/divide-and-conquer-algorithms
+// var mergeSort = function(array) {
+// };
 
-// 40. Deeply clone objects and arrays.
-// var obj1 = {a:1,b:{bb:{bbb:2}},c:3};
-// var obj2 = clone(obj1);
-// console.log(obj2); // {a:1,b:{bb:{bbb:2}},c:3}
-// obj1 === obj2 // false
-var clone = function(input) {
-};
+// // 40. Deeply clone objects and arrays.
+// // var obj1 = {a:1,b:{bb:{bbb:2}},c:3};
+// // var obj2 = clone(obj1);
+// // console.log(obj2); // {a:1,b:{bb:{bbb:2}},c:3}
+// // obj1 === obj2 // false
+// var clone = function(input) {
+// };
