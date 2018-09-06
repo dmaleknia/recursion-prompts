@@ -291,7 +291,7 @@ var letterTally = function(str, obj = {}) {
   } else {
     obj[firstLetter] += 1;
   }
-  letterTally(str.substr(1), obj);
+  return letterTally(str.substr(1), obj);
 };
 
 // 32. Eliminate consecutive duplicates in a list. If the list contains repeated
