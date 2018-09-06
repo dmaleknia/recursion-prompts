@@ -215,14 +215,28 @@ var replaceKeysInObj = function(obj, oldKey, newKey) {
 // fibonacci(5); // [0,1,1,2,3,5]
 // Note: The 0 is not counted.
 var fibonacci = function(n) {
-  var result = [];
-  if (n <= 0) {
-    return null;
+  // if (n <= 0) {
+  //   return null;
+  // }
+  // if (n <= 2) {
+  //   return [0, 1].slice(0, n);
+  // }
+  // var result = fibonacci(n - 1);
+  // result.push(result[result.length - 1] + result[result.length -2]);
+  // return result;
+  if (n <= 0) return null;
+  if (n === 1) return [0, 1];
+  if (n === 2) return [0, 1, 1];
+  else {
+    var n2 = fibonacci(n - 2);
+    var n1 = fibonacci(n - 1);
+    return fibonacci(n - 1).concat(n1.pop() + n2.pop());
   }
-  if (n === 1) {
-    return [0, 1];
-  }
-  return [0].concat(fibonacci(n - 2) + fibonacci(n - 1));
+
+  // if (n <= 0) return null;
+  // if (n == 1) return [0, 1];
+  // const arr = fibonacci(n - 1);
+  // return [...arr, arr[n-1] + arr[n-2]];
 };
 
 // 26. Return the Fibonacci number located at index n of the Fibonacci sequence.
