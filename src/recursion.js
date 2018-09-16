@@ -109,7 +109,7 @@ var gcd = function(x, y) {
   return x < 0 || y < 0 ? null : x % y === 0 ? y : gcd(y, x % y);
 };
 
-// 15. Wr a function that compares each character of two strings and returns true if
+// 15. Write a function that compares each character of two strings and returns true if
 // both are identical.
 // compareStr('house', 'houses') // false
 // compareStr('tomato', 'tomato') // true
